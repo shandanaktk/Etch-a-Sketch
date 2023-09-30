@@ -23,6 +23,11 @@ body{
     background: #641f02;
     box-shadow: inset 10px 10px 8px #280c01,
                 inset -10px -10px 8px #a03203;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .gridcontainer{
@@ -44,15 +49,75 @@ body{
     text-align: center;
     font-size: 45px;
     color: beige;
-    padding: 5px;
-    margin-top: 20px;
+    padding: 10px;
+    margin-top: 5px;
     width: 550px;
     height: 65px;
 }
 
+.grid-size{ margin-top: 60px;}
+.b4{ margin-top: 50px;}
+.b6{ margin-top: 50px;}
+
+.button {
+    align-items: center;
+    appearance: none;
+    background-color: #af8383;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,rgba(45, 35, 66, 0.15) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Frijole', cursive;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+   }
+   
+   .button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+   }
+   
+   .button:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+   }
+   
+   .button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+   }
+
 .box{
     border: 2px solid wheat;
-    width: 420px;
-    height: 420px;
+    width: 430px;
+    height: 430px;
+    display: grid;
+    /* repeat for number of cells per row/column */
+    grid-template-columns: repeat(5, 1fr);  
+    grid-template-rows: repeat(5, 1fr);
 }
 
+.cell{    
+    border: 1px solid wheat;
+}
+
+.black{
+    background-color: black;
+}
